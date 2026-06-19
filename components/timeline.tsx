@@ -19,8 +19,9 @@ const rows: GanttRow[] = [
     name: "Accessibility",
     poc: { name: "Kartik Trivedi", memberId: "member-kartik-trivedi" },
     phases: [
-      { label: "Barrier assessment",  start: 4, end: 7  }, // temp
-      { label: "Mitigation planning", start: 8, end: 11 }, // temp
+      { label: "Community survey",           start: 4, end: 6  },
+      { label: "Remote & mic protocols",     start: 6, end: 8  },
+      { label: "Barrier assessment",         start: 11, end: 12 },
     ],
   },
   {
@@ -35,7 +36,7 @@ const rows: GanttRow[] = [
     name: "Community Connection",
     poc: { name: "Radhika Santhanagopalan", memberId: "member-radhika-santhanagopalan" },
     phases: [
-      { label: "Planning & coordination", start: 5, end: 8  }, // temp
+      { label: "Planning & coordination", start: 7, end: 8  }, // temp
       { label: "Programming & events",    start: 9, end: 11 },
     ],
   },
@@ -43,8 +44,8 @@ const rows: GanttRow[] = [
     name: "Demographics Tracking",
     poc: { name: "Rochak Khandelwal", memberId: "member-rochak-khandelwal" },
     phases: [
-      { label: "Dashboard & scoping", start: 4, end: 5, completed: true },
-      { label: "Climate survey",      start: 6, end: 12 }, // continues → Jan 2027
+      { label: "Demographics dashboard", start: 4, end: 6, completed: true },
+      { label: "Survey & data systems",  start: 6, end: 12 }, // survey continues → Jan 2027
     ],
   },
   {
@@ -59,9 +60,10 @@ const rows: GanttRow[] = [
     name: "Mentor Matching",
     poc: { name: "Rich Truncellito", memberId: "member-rich-truncellito" },
     phases: [
-      { label: "Survey & resources",   start: 5, end: 7  },
-      { label: "Algorithm & matching", start: 8, end: 9  },
-      { label: "Conference program",   start: 10, end: 11 },
+      { label: "Survey & resource development", start: 5,  end: 7  },
+      { label: "Algorithm development",         start: 8,  end: 8  },
+      { label: "Matching & Meetings",           start: 9,  end: 11 },
+      { label: "Feedback",                      start: 12, end: 12 },
     ],
   },
   {
@@ -76,8 +78,8 @@ const rows: GanttRow[] = [
     name: "Travel Scholarships",
     poc: { name: "Crystal Reeck", memberId: "member-crystal-reeck" },
     phases: [
-      { label: "Process review", start: 4, end: 6  }, // temp
-      { label: "Award cycle",    start: 7, end: 10 }, // temp
+      { label: "Process review", start: 4, end: 5 },
+      { label: "Award cycle",    start: 8, end: 9 },
     ],
   },
 ]

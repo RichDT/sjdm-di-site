@@ -100,7 +100,10 @@
       "Bash(curl -sL \"https://eller.arizona.edu/person/ashley-angulo\" -A \"Mozilla/5.0\")",
       "Bash(curl -sL https://eller.arizona.edu/sites/default/files/styles/az_medium/public/2025-06/AshleyAngulo.png.webp?itok=UEA8Q4VB -A Mozilla/5.0 -o /Users/richtruncellito/Antigravity/SJDM_Site/public/members/ashley-angulo.png)",
       "Bash(sips -s format png /Users/richtruncellito/Antigravity/SJDM_Site/public/members/ashley-angulo.png --out /Users/richtruncellito/Antigravity/SJDM_Site/public/members/ashley-angulo.png)",
-      "Bash(sips -Z 400 /Users/richtruncellito/Antigravity/SJDM_Site/public/members/ashley-angulo.png --out /Users/richtruncellito/Antigravity/SJDM_Site/public/members/ashley-angulo.png)"
+      "Bash(sips -Z 400 /Users/richtruncellito/Antigravity/SJDM_Site/public/members/ashley-angulo.png --out /Users/richtruncellito/Antigravity/SJDM_Site/public/members/ashley-angulo.png)",
+      "mcp__Claude_in_Chrome__navigate",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

@@ -9,13 +9,14 @@ import {
   Globe,
   Plane,
   ExternalLink,
+  ArrowRight,
 } from "lucide-react"
 
 type Initiative = {
   icon: React.ComponentType<{ className?: string }>
   title: string
   description: string
-  link?: { text: string; url: string }
+  link?: { text: string; url: string; external?: boolean }
   poc: { name: string; memberId: string }
 }
 
@@ -32,6 +33,7 @@ const initiatives: Initiative[] = [
     title: "Code of Conduct",
     description:
       "Maintaining community guidelines to ensure SJDM events and spaces remain respectful and welcoming.",
+    link: { text: "Read the full Code of Conduct", url: "/code-of-conduct", external: false },
     poc: { name: "Eva Buechel", memberId: "member-eva-buechel" },
   },
   {
@@ -111,12 +113,14 @@ export function Initiatives() {
               {initiative.link && (
                 <a
                   href={initiative.link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(initiative.link.external !== false ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                 >
                   {initiative.link.text}
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  {initiative.link.external === false
+                    ? <ArrowRight className="w-3.5 h-3.5" />
+                    : <ExternalLink className="w-3.5 h-3.5" />
+                  }
                 </a>
               )}
               <div className="flex-1" />

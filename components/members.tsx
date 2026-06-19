@@ -30,7 +30,7 @@ const currentMembers: Member[] = [
     photo: "/members/crystal-reeck.jpg",
   },
   {
-    name: "Abdullah Al-Thenayyan",
+    name: "Abdullah Althenayyan",
     affiliation: "Columbia Business School",
     years: "2026–Present",
     url: "https://business.columbia.edu/post-grad/people/abdullah-althenayyan",

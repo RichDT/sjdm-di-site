@@ -5,11 +5,11 @@ import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#initiatives", label: "Initiatives" },
-  { href: "#timeline", label: "Calendar" },
-  { href: "#members", label: "Members" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#initiatives", label: "Initiatives" },
+  { href: "/#timeline", label: "Calendar" },
+  { href: "/#members", label: "Members" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 export function Header() {
