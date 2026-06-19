@@ -34,12 +34,14 @@ const currentMembers: Member[] = [
     affiliation: "Columbia Business School",
     years: "2026–Present",
     url: "https://business.columbia.edu/post-grad/people/abdullah-althenayyan",
+    photo: "/members/abdullah-althenayyan.jpg",
   },
   {
     name: "Zac Arens",
     affiliation: "Oklahoma State University",
     years: "2026–Present",
     url: "https://experts.okstate.edu/zachary.arens",
+    photo: "/members/zac-arens.jpg",
   },
   {
     name: "Eva Buechel",
@@ -111,8 +113,9 @@ const pastMembers: Member[] = [
     name: "Crystal Hall",
     affiliation: "University of Washington",
     role: "Inaugural Chair",
-    years: "2019–2021",
-    url: "https://ischool.uw.edu/people/faculty/profile/cshall",
+    years: "2020–2021",
+    url: "https://evans.uw.edu/profile/crystal-hall/",
+    photo: "/members/crystal-hall.jpg",
   },
   {
     name: "Jane Risen",
