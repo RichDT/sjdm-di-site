@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="flex flex-col">
+        <a href="/" className="flex flex-col">
           <span className="text-sm font-medium tracking-wide text-muted-foreground">SJDM</span>
           <span className="text-lg font-semibold tracking-tight">Diversity & Inclusion</span>
         </a>

@@ -63,6 +63,7 @@ const initiatives: Initiative[] = [
     title: "Mentor Matching",
     description:
       "Each year the program pairs curious mentees with experienced mentors — including faculty and industry professionals — for 30–90 minute conversations on professional development and research. Participation is open to all SJDM members, with both in-person (conference) and virtual options available.",
+    link: { text: "Resources for mentors and mentees", url: "/mentoring-resources", external: false },
     poc: { name: "Rich Truncellito", memberId: "member-rich-truncellito" },
   },
   {

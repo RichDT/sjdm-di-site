@@ -10,7 +10,7 @@ const MONTHS = [
 const TODAY      = new Date().getMonth() + 1 // current month, 1-indexed
 const CONFERENCE = 11 // November
 
-type Phase   = { label: string; start: number; end: number; completed?: boolean }
+type Phase   = { label: string; start: number; end: number; completed?: boolean; link?: string }
 type GanttRow = { name: string; phases: Phase[]; poc: { name: string; memberId: string } }
 
 // Alphabetical. Dates marked "// temp" are placeholders pending confirmed timelines.
@@ -60,10 +60,10 @@ const rows: GanttRow[] = [
     name: "Mentor Matching",
     poc: { name: "Rich Truncellito", memberId: "member-rich-truncellito" },
     phases: [
-      { label: "Survey & resource development", start: 5,  end: 7  },
-      { label: "Algorithm development",         start: 8,  end: 8  },
-      { label: "Matching & Meetings",           start: 9,  end: 11 },
-      { label: "Feedback",                      start: 12, end: 12 },
+      { label: "Resource development",    start: 5,  end: 6,  completed: true, link: "/mentoring-resources" },
+      { label: "Algorithm & survey dev.", start: 7,  end: 8  },
+      { label: "Matching & Meetings",     start: 9,  end: 11 },
+      { label: "Feedback",                start: 12, end: 12 },
     ],
   },
   {
@@ -268,6 +268,15 @@ export function Timeline() {
                                 onMouseEnter={() => setHover({ ri, pi, start: phase.start, end: phase.end })}
                                 onMouseLeave={() => setHover(null)}
                               >
+                                {phase.link && (
+                                  <a
+                                    href={phase.link}
+                                    className="absolute inset-0 z-20 cursor-pointer"
+                                    aria-label={phase.label}
+                                    onMouseEnter={() => setHover({ ri, pi, start: phase.start, end: phase.end })}
+                                    onMouseLeave={() => setHover(null)}
+                                  />
+                                )}
                                 {/* Completed phase fill */}
                                 {phase.completed && (
                                   <div className="absolute inset-0 bg-emerald-500/60 pointer-events-none" />
