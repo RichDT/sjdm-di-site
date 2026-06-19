@@ -106,7 +106,14 @@ const currentMembers: Member[] = [
 ]
 
 const pastMembers: Member[] = [
-  // Chair Emerita first, then alphabetical by last name
+  // Inaugural Chair first, then Chair Emerita, then alphabetical by last name
+  {
+    name: "Crystal Hall",
+    affiliation: "University of Washington",
+    role: "Inaugural Chair",
+    years: "2019–2021",
+    url: "https://ischool.uw.edu/people/faculty/profile/cshall",
+  },
   {
     name: "Jane Risen",
     affiliation: "University of Chicago Booth",
