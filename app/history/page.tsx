@@ -44,7 +44,7 @@ export default function HistoryPage() {
                 the SJDM Executive Board and announced in June 2020.
               </p>
               <p>
-                In her announcement, President Milkman wrote:
+                In her announcement, then-President Milkman wrote:
               </p>
               <blockquote className="my-6 pl-5 border-l-2 border-primary/40 text-muted-foreground italic">
                 "As you know, the Society for Judgment and Decision Making is and always has been
