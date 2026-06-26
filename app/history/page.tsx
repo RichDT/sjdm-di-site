@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import Link from "next/link"
 
 export const metadata = {
   title: "History — SJDM Diversity & Inclusion Committee",
@@ -137,12 +138,12 @@ export default function HistoryPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-            <a
+            <Link
               href="/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               ← Back to the D&amp;I Committee home
-            </a>
+            </Link>
             <a
               href="https://sjdm.org/newsletters/20-jun.pdf"
               target="_blank"

@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import {
   Users,
   BookOpen,
@@ -112,17 +113,25 @@ export function Initiatives() {
                 {initiative.description}
               </p>
               {initiative.link && (
-                <a
-                  href={initiative.link.url}
-                  {...(initiative.link.external !== false ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                >
-                  {initiative.link.text}
-                  {initiative.link.external === false
-                    ? <ArrowRight className="w-3.5 h-3.5" />
-                    : <ExternalLink className="w-3.5 h-3.5" />
-                  }
-                </a>
+                initiative.link.external === false ? (
+                  <Link
+                    href={initiative.link.url}
+                    className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    {initiative.link.text}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                ) : (
+                  <a
+                    href={initiative.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    {initiative.link.text}
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )
               )}
               <div className="flex-1" />
               <p className="mt-4 pt-4 text-[11px] text-muted-foreground/70 border-t border-border">

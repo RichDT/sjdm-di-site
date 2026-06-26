@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ExternalLink } from "lucide-react"
+import Link from "next/link"
 
 export const metadata = {
   title: "Mentoring Resources — SJDM Diversity & Inclusion",
@@ -347,9 +348,9 @@ export default function MentoringResourcesPage() {
                 </Bullet>
                 <Bullet>
                   All participants are expected to adhere to the{" "}
-                  <a href="/code-of-conduct" className="underline underline-offset-2 hover:text-foreground transition-colors">
+                  <Link href="/code-of-conduct" className="underline underline-offset-2 hover:text-foreground transition-colors">
                     SJDM Code of Conduct
-                  </a>{" "}
+                  </Link>{" "}
                   as well as the policies of their individual organizations.
                 </Bullet>
               </ul>
@@ -443,9 +444,9 @@ export default function MentoringResourcesPage() {
           </div>
 
           <div className="mt-14 pt-8 border-t border-border">
-            <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               ← Back to the D&amp;I Committee home
-            </a>
+            </Link>
           </div>
 
         </div>

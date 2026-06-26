@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import Link from "next/link"
 
 export const metadata = {
   title: "Code of Conduct — SJDM Diversity & Inclusion",
@@ -130,12 +131,12 @@ export default function CodeOfConductPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-border">
-            <a
+            <Link
               href="/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               ← Back to the D&amp;I Committee home
-            </a>
+            </Link>
           </div>
 
         </div>
