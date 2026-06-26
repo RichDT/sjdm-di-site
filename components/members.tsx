@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 type Member = {
   name: string
   affiliation: string
@@ -282,9 +284,11 @@ function MemberCard({ member, showContact = false }: { member: Member; showConta
 
   const avatar = member.photo ? (
     <div className="rounded-full w-16 h-16 overflow-hidden mb-4 ring-2 ring-border group-hover:ring-accent/40 transition-all flex-shrink-0">
-      <img
+      <Image
         src={member.photo}
         alt={member.name}
+        width={64}
+        height={64}
         className="w-full h-full object-cover"
       />
     </div>
