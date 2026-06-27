@@ -1,4 +1,4 @@
-import Image from "next/image"
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
 type Member = {
   name: string
@@ -138,13 +138,11 @@ const pastMembers: Member[] = [
     name: "Edward Chang",
     affiliation: "University of Michigan",
     years: "2020–2021",
-    url: "https://lsa.umich.edu/psych/people/faculty/edchang.html",
   },
   {
     name: "Nathan Cheek",
     affiliation: "Princeton University",
     years: "2020–2022",
-    url: "https://nathancheek.com",
   },
   {
     name: "Kristine Cho",
@@ -157,7 +155,6 @@ const pastMembers: Member[] = [
     name: "Brandy Edmondson",
     affiliation: "University of Minnesota (Carlson)",
     years: "2021–2022",
-    url: "https://carlsonschool.umn.edu/faculty/brandy-edmondson",
   },
   {
     name: "Margaret Echelbarger",
@@ -185,6 +182,7 @@ const pastMembers: Member[] = [
     affiliation: "Carnegie Mellon University",
     years: "2021–2022",
     url: "https://engineering.cmu.edu/sds/people/faculty/jarbo-kevin.html",
+    photo: "/members/kevin-jarbo.jpg",
   },
   {
     name: "Ellie Kyung",
@@ -198,6 +196,7 @@ const pastMembers: Member[] = [
     affiliation: "Harvard Kennedy School",
     years: "2020–2022",
     url: "https://www.hks.harvard.edu/faculty/jennifer-lerner",
+    photo: "/members/jennifer-lerner-hks.jpg",
   },
   {
     name: "Ye Li",
@@ -231,30 +230,34 @@ const pastMembers: Member[] = [
     affiliation: "Harvard Kennedy School",
     years: "2020–2022",
     url: "https://www.hks.harvard.edu/faculty/todd-rogers",
+    photo: "/members/todd-rogers.jpg",
   },
   {
     name: "Aaron Sackett",
     affiliation: "University of St. Thomas",
     years: "2022–2023",
-    url: "https://aaronrsackett.wordpress.com",
   },
   {
     name: "Ovul Sezer",
     affiliation: "UNC Kenan-Flagler",
     years: "2022–2023",
     url: "https://www.kenan-flagler.unc.edu/faculty/directory/ovul-sezer/",
+    photo: "/members/ovul-sezer.jpg",
   },
   {
     name: "Eesha Sharma",
     affiliation: "USC Marshall",
     years: "2021–2022",
     url: "https://www.marshall.usc.edu/people/faculty/sharma-eesha",
+    photo: "/members/eesha-sharma.jpg",
   },
   {
     name: "Suzanne Shu",
-    affiliation: "Cornell University",
+    affiliation: "UCLA Anderson",
     role: "Board Representative",
     years: "2020–2021",
+    url: "https://www.anderson.ucla.edu/faculty-and-research/marketing/faculty/shu",
+    photo: "/members/suzanne-shu.png",
   },
   {
     name: "Yiyun Shou",
@@ -269,6 +272,7 @@ const pastMembers: Member[] = [
     role: "Board Representative",
     years: "2022–2023",
     url: "https://www.anderson.ucla.edu/faculty-and-research/marketing/faculty/spiller",
+    photo: "/members/stephen-spiller.jpg",
   },
   {
     name: "Eric Van Epps",
@@ -284,11 +288,9 @@ function MemberCard({ member, showContact = false }: { member: Member; showConta
 
   const avatar = member.photo ? (
     <div className="rounded-full w-16 h-16 overflow-hidden mb-4 ring-2 ring-border group-hover:ring-accent/40 transition-all flex-shrink-0">
-      <Image
-        src={member.photo}
+      <img
+        src={`${BASE}${member.photo}`}
         alt={member.name}
-        width={64}
-        height={64}
         className="w-full h-full object-cover"
       />
     </div>
