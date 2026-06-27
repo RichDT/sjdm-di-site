@@ -253,7 +253,7 @@ const pastMembers: Member[] = [
   },
   {
     name: "Suzanne Shu",
-    affiliation: "UCLA Anderson",
+    affiliation: "UCLA Anderson (Professor Emerita)",
     role: "Board Representative",
     years: "2020–2021",
     url: "https://www.anderson.ucla.edu/faculty-and-research/marketing/faculty/shu",
