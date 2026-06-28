@@ -142,7 +142,7 @@ const pastMembers: Member[] = [
   },
   {
     name: "Nathan Cheek",
-    affiliation: "Princeton University",
+    affiliation: "University of Maryland, College Park",
     years: "2020–2022",
     url: "https://natecheek.com/",
     photo: "/members/nate-cheek.jpg",
