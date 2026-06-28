@@ -141,7 +141,7 @@ const pastMembers: Member[] = [
     url: "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1284280",
   },
   {
-    name: "Nate Cheek",
+    name: "Nathan Cheek",
     affiliation: "Princeton University",
     years: "2020–2022",
     url: "https://natecheek.com/",
@@ -186,7 +186,7 @@ const pastMembers: Member[] = [
     name: "Kevin Jarbo",
     affiliation: "Carnegie Mellon University",
     years: "2021–2022",
-    url: "https://engineering.cmu.edu/sds/people/faculty/jarbo-kevin.html",
+    url: "https://www.cmu.edu/dietrich/sds/people/faculty/kevin-jarbo.html",
     photo: "/members/kevin-jarbo.jpg",
   },
   {
@@ -251,24 +251,24 @@ const pastMembers: Member[] = [
   },
   {
     name: "Ovul Sezer",
-    affiliation: "UNC Kenan-Flagler",
+    affiliation: "Cornell SC Johnson College of Business",
     years: "2022–2023",
-    url: "https://www.kenan-flagler.unc.edu/faculty/directory/ovul-sezer/",
+    url: "https://business.cornell.edu/faculty-research/faculty/os244/",
     photo: "/members/ovul-sezer.jpg",
   },
   {
     name: "Eesha Sharma",
-    affiliation: "USC Marshall",
+    affiliation: "San Diego State University",
     years: "2021–2022",
-    url: "https://www.marshall.usc.edu/people/faculty/sharma-eesha",
+    url: "https://business.sdsu.edu/directory/esharma",
     photo: "/members/eesha-sharma.jpg",
   },
   {
     name: "Suzanne Shu",
-    affiliation: "UCLA Anderson (Professor Emerita)",
+    affiliation: "Cornell SC Johnson College of Business",
     role: "Board Representative",
     years: "2020–2021",
-    url: "https://www.anderson.ucla.edu/faculty-and-research/marketing/faculty/shu",
+    url: "https://business.cornell.edu/faculty-research/faculty/sbs78/",
     photo: "/members/suzanne-shu.png",
   },
   {
