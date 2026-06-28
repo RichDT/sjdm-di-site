@@ -282,6 +282,14 @@ const pastMembers: Member[] = [
     photo: "/members/suzanne-shu.jpg",
   },
   {
+    name: "Oleg Urminsky",
+    affiliation: "University of Chicago Booth",
+    role: "Board Representative",
+    years: "2021–2022",
+    url: "https://www.chicagobooth.edu/faculty/directory/u/oleg-urminsky",
+    photo: "/members/oleg-urminsky.jpg",
+  },
+  {
     name: "Yiyun Shou",
     affiliation: "National University of Singapore",
     years: "2023–2025",
