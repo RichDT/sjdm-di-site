@@ -54,6 +54,14 @@ const currentMembers: Member[] = [
     photo: "/members/eva-buechel.jpg",
   },
   {
+    name: "Ayelet Gneezy",
+    affiliation: "UC San Diego Rady School",
+    role: "Board Representative",
+    years: "2024–Present",
+    url: "https://rady.ucsd.edu/faculty-research/faculty/ayelet-gneezy.html",
+    photo: "/members/ayelet-gneezy.jpg",
+  },
+  {
     name: "Ryan Gaffney",
     affiliation: "Vanderbilt University",
     subcommittee: "Grad Student Outreach",
