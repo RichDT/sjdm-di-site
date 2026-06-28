@@ -139,6 +139,7 @@ const pastMembers: Member[] = [
     affiliation: "Harvard Business School",
     years: "2020–2021",
     url: "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1284280",
+    photo: "/members/edward-chang.jpg",
   },
   {
     name: "Nathan Cheek",
@@ -215,6 +216,7 @@ const pastMembers: Member[] = [
     affiliation: "Boston University",
     years: "2021–2022",
     url: "https://www.linkedin.com/in/tylerfrasermacdonald/",
+    photo: "/members/tyler-macdonald.jpg",
   },
   {
     name: "Molly Moore",
@@ -269,7 +271,7 @@ const pastMembers: Member[] = [
     role: "Board Representative",
     years: "2020–2021",
     url: "https://business.cornell.edu/faculty-research/faculty/sbs78/",
-    photo: "/members/suzanne-shu.png",
+    photo: "/members/suzanne-shu.jpg",
   },
   {
     name: "Yiyun Shou",
