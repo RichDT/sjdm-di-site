@@ -136,13 +136,16 @@ const pastMembers: Member[] = [
   },
   {
     name: "Edward Chang",
-    affiliation: "University of Michigan",
+    affiliation: "Harvard Business School",
     years: "2020–2021",
+    url: "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1284280",
   },
   {
-    name: "Nathan Cheek",
+    name: "Nate Cheek",
     affiliation: "Princeton University",
     years: "2020–2022",
+    url: "https://natecheek.com/",
+    photo: "/members/nate-cheek.jpg",
   },
   {
     name: "Kristine Cho",
@@ -153,8 +156,10 @@ const pastMembers: Member[] = [
   },
   {
     name: "Brandy Edmondson",
-    affiliation: "University of Minnesota (Carlson)",
+    affiliation: "Rice University",
     years: "2021–2022",
+    url: "https://business.rice.edu/person/brandy-edmondson",
+    photo: "/members/brandy-edmondson.jpg",
   },
   {
     name: "Margaret Echelbarger",
@@ -209,11 +214,14 @@ const pastMembers: Member[] = [
     name: "Tyler MacDonald",
     affiliation: "Boston University",
     years: "2021–2022",
+    url: "https://www.linkedin.com/in/tylerfrasermacdonald/",
   },
   {
     name: "Molly Moore",
-    affiliation: "",
+    affiliation: "Washington University in St. Louis",
     years: "2022–2023",
+    url: "https://www.mollymooreplz.com/",
+    photo: "/members/molly-moore.jpg",
   },
   {
     name: "Elizabeth Perry",
@@ -224,6 +232,8 @@ const pastMembers: Member[] = [
     name: "Deidre Popovich",
     affiliation: "Texas Tech University",
     years: "2022–2023",
+    url: "http://www.deidrepopovich.com/",
+    photo: "/members/deidre-popovich.jpg",
   },
   {
     name: "Todd Rogers",
@@ -236,6 +246,8 @@ const pastMembers: Member[] = [
     name: "Aaron Sackett",
     affiliation: "University of St. Thomas",
     years: "2022–2023",
+    url: "https://business.stthomas.edu/faculty/directory/aaron-sackett/",
+    photo: "/members/aaron-sackett.jpg",
   },
   {
     name: "Ovul Sezer",

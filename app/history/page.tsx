@@ -40,7 +40,7 @@ export default function HistoryPage() {
               </p>
               <p className="mb-4">
                 The inaugural committee — chaired by Crystal Hall and including Edward Chang,
-                Nathan Cheek, Jennifer Lerner, Suzanne Shu, and Todd Rogers — produced a
+                Nate Cheek, Jennifer Lerner, Suzanne Shu, and Todd Rogers — produced a
                 thoughtful report with clear recommendations, nearly all of which were adopted by
                 the SJDM Executive Board and announced in June 2020.
               </p>
@@ -102,7 +102,7 @@ export default function HistoryPage() {
                 {[
                   { name: "Crystal Hall", note: "Chair" },
                   { name: "Edward Chang" },
-                  { name: "Nathan Cheek" },
+                  { name: "Nate Cheek" },
                   { name: "Jennifer Lerner" },
                   { name: "Suzanne Shu", note: "Executive Board representative" },
                   { name: "Todd Rogers" },
