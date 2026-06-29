@@ -2,6 +2,9 @@
 const nextConfig = {
   output: "export",
   basePath: "/dandicommittee",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: "/dandicommittee",
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

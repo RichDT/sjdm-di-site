@@ -1,3 +1,8 @@
+"use client"
+
+import { useState } from "react"
+import { ChevronDown, ChevronUp } from "lucide-react"
+
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
 type Member = {
@@ -27,7 +32,7 @@ const currentMembers: Member[] = [
     affiliation: "Temple University",
     role: "Chair Emerita",
     subcommittee: "Travel Scholarships",
-    years: "2024–Present",
+    years: "2023–Present",
     url: "https://www.fox.temple.edu/directory/crystal-reeck-tug28076",
     photo: "/members/crystal-reeck.jpg",
   },
@@ -53,14 +58,7 @@ const currentMembers: Member[] = [
     url: "https://mark.hkust.edu.hk/faculty-and-staff/directory/buechel",
     photo: "/members/eva-buechel.jpg",
   },
-  {
-    name: "Ayelet Gneezy",
-    affiliation: "UC San Diego Rady School",
-    role: "Board Representative",
-    years: "2024–Present",
-    url: "https://rady.ucsd.edu/faculty-research/faculty/ayelet-gneezy.html",
-    photo: "/members/ayelet-gneezy.jpg",
-  },
+
   {
     name: "Ryan Gaffney",
     affiliation: "Vanderbilt University",
@@ -118,85 +116,14 @@ const currentMembers: Member[] = [
 ]
 
 const pastMembers: Member[] = [
-  // Inaugural Chair first, then Chair Emerita, then alphabetical by last name
-  {
-    name: "Crystal Hall",
-    affiliation: "University of Washington",
-    role: "Inaugural Chair",
-    years: "2020–2022",
-    url: "https://evans.uw.edu/profile/crystal-hall/",
-    photo: "/members/crystal-hall.jpg",
-  },
-  {
-    name: "Jane Risen",
-    affiliation: "University of Chicago Booth",
-    role: "Chair Emerita",
-    years: "2024–2025",
-    url: "https://www.chicagobooth.edu/faculty/directory/r/jane-l-risen",
-    photo: "/members/jane-risen.jpg",
-  },
-  {
-    name: "Ashley Angulo",
-    affiliation: "University of Arizona",
-    years: "2023–2025",
-    url: "https://eller.arizona.edu/person/ashley-angulo",
-    photo: "/members/ashley-angulo.png",
-  },
-  {
-    name: "Edward Chang",
-    affiliation: "Harvard Business School",
-    years: "2020–2021",
-    url: "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1284280",
-    photo: "/members/edward-chang.jpg",
-  },
-  {
-    name: "Nathan Cheek",
-    affiliation: "University of Maryland, College Park",
-    years: "2020–2022",
-    url: "https://natecheek.com/",
-    photo: "/members/nate-cheek.jpg",
-  },
+  // Most recent to least recent; alphabetical by last name within each cohort
+  // ── ended 2026 ──────────────────────────────────────────────────────────
   {
     name: "Kristine Cho",
     affiliation: "UC Berkeley (Haas)",
     years: "2024–2026",
     url: "https://kristinecho.com/",
     photo: "/members/kristine-cho.jpg",
-  },
-  {
-    name: "Brandy Edmondson",
-    affiliation: "Rice University",
-    years: "2021–2022",
-    url: "https://business.rice.edu/person/brandy-edmondson",
-    photo: "/members/brandy-edmondson.jpg",
-  },
-  {
-    name: "Margaret Echelbarger",
-    affiliation: "Stony Brook University",
-    years: "2023–2025",
-    url: "https://www.mechelbarger.com/",
-    photo: "/members/margaret-echelbarger.jpg",
-  },
-  {
-    name: "Fausto González",
-    affiliation: "Washington University in St. Louis",
-    years: "2023–2025",
-    url: "https://olin.washu.edu/faculty/fausto-gonzalez",
-    photo: "/members/fausto-gonzalez.jpg",
-  },
-  {
-    name: "Ania Jaroszewicz",
-    affiliation: "UC San Diego",
-    years: "2023–2025",
-    url: "https://www.aniajaroszewicz.com/",
-    photo: "/members/ania-jaroszewicz.jpg",
-  },
-  {
-    name: "Kevin Jarbo",
-    affiliation: "Carnegie Mellon University",
-    years: "2021–2022",
-    url: "https://www.cmu.edu/dietrich/sds/people/faculty/kevin-jarbo.html",
-    photo: "/members/kevin-jarbo.jpg",
   },
   {
     name: "Ellie Kyung",
@@ -206,88 +133,33 @@ const pastMembers: Member[] = [
     photo: "/members/ellie-kyung.jpg",
   },
   {
-    name: "Jennifer Lerner",
-    affiliation: "Harvard Kennedy School",
-    years: "2020–2022",
-    url: "https://www.hks.harvard.edu/faculty/jennifer-lerner",
-    photo: "/members/jennifer-lerner-hks.jpg",
-  },
-  {
     name: "Ye Li",
     affiliation: "UC Riverside",
     years: "2024–2026",
     url: "https://profiles.ucr.edu/app/home/profile/yeliphd",
     photo: "/members/ye-li.jpg",
   },
+  // ── ended 2025 ──────────────────────────────────────────────────────────
   {
-    name: "Tyler MacDonald",
-    affiliation: "Boston University",
-    years: "2021–2022",
-    url: "https://www.linkedin.com/in/tylerfrasermacdonald/",
-    photo: "/members/tyler-macdonald.jpg",
+    name: "Ashley Angulo",
+    affiliation: "University of Arizona",
+    years: "2023–2025",
+    url: "https://eller.arizona.edu/person/ashley-angulo",
+    photo: "/members/ashley-angulo.png",
   },
   {
-    name: "Molly Moore",
-    affiliation: "Washington University in St. Louis",
-    years: "2022–2023",
-    url: "https://www.mollymooreplz.com/",
-    photo: "/members/molly-moore.jpg",
-  },
-  {
-    name: "Elizabeth Perry",
-    affiliation: "",
-    years: "2021–2023",
-  },
-  {
-    name: "Deidre Popovich",
-    affiliation: "Texas Tech University",
-    years: "2022–2023",
-    url: "http://www.deidrepopovich.com/",
-    photo: "/members/deidre-popovich.jpg",
-  },
-  {
-    name: "Todd Rogers",
-    affiliation: "Harvard Kennedy School",
-    years: "2020–2022",
-    url: "https://www.hks.harvard.edu/faculty/todd-rogers",
-    photo: "/members/todd-rogers.jpg",
+    name: "Ania Jaroszewicz",
+    affiliation: "UC San Diego",
+    years: "2023–2025",
+    url: "https://www.aniajaroszewicz.com/",
+    photo: "/members/ania-jaroszewicz.jpg",
   },
   {
     name: "Aaron Sackett",
     affiliation: "University of St. Thomas",
-    years: "2022–2023",
+    years: "2023–2025",
     url: "https://business.stthomas.edu/faculty/directory/aaron-sackett/",
     photo: "/members/aaron-sackett.jpg",
-  },
-  {
-    name: "Ovul Sezer",
-    affiliation: "Cornell SC Johnson College of Business",
-    years: "2022–2023",
-    url: "https://business.cornell.edu/faculty-research/faculty/os244/",
-    photo: "/members/ovul-sezer.jpg",
-  },
-  {
-    name: "Eesha Sharma",
-    affiliation: "San Diego State University",
-    years: "2021–2022",
-    url: "https://business.sdsu.edu/directory/esharma",
-    photo: "/members/eesha-sharma.jpg",
-  },
-  {
-    name: "Suzanne Shu",
-    affiliation: "Cornell SC Johnson College of Business",
-    role: "Board Representative",
-    years: "2020–2021",
-    url: "https://business.cornell.edu/faculty-research/faculty/sbs78/",
-    photo: "/members/suzanne-shu.jpg",
-  },
-  {
-    name: "Oleg Urminsky",
-    affiliation: "University of Chicago Booth",
-    role: "Board Representative",
-    years: "2021–2022",
-    url: "https://www.chicagobooth.edu/faculty/directory/u/oleg-urminsky",
-    photo: "/members/oleg-urminsky.jpg",
   },
   {
     name: "Yiyun Shou",
@@ -297,19 +169,137 @@ const pastMembers: Member[] = [
     photo: "/members/yiyun-shou.jpg",
   },
   {
-    name: "Stephen Spiller",
-    affiliation: "UCLA Anderson",
-    role: "Board Representative",
-    years: "2022–2023",
-    url: "https://www.anderson.ucla.edu/faculty-and-research/marketing/faculty/spiller",
-    photo: "/members/stephen-spiller.jpg",
-  },
-  {
     name: "Eric Van Epps",
     affiliation: "Vanderbilt University",
     years: "2023–2025",
     url: "https://business.vanderbilt.edu/bio/eric-vanepps/",
     photo: "/members/eric-vanepps.png",
+  },
+  // ── ended 2024 ──────────────────────────────────────────────────────────
+  {
+    name: "Margaret Echelbarger",
+    affiliation: "Stony Brook University",
+    years: "2022–2024",
+    url: "https://www.mechelbarger.com/",
+    photo: "/members/margaret-echelbarger.jpg",
+  },
+  {
+    name: "Fausto González",
+    affiliation: "Washington University in St. Louis",
+    years: "2022–2024",
+    url: "https://olin.washu.edu/faculty/fausto-gonzalez",
+    photo: "/members/fausto-gonzalez.jpg",
+  },
+  {
+    name: "Molly Moore",
+    affiliation: "Washington University in St. Louis",
+    years: "2022–2024",
+    url: "https://www.mollymooreplz.com/",
+    photo: "/members/molly-moore.jpg",
+  },
+  {
+    name: "Elizabeth Perry",
+    affiliation: "",
+    years: "2021–2024",
+  },
+  {
+    name: "Deidre Popovich",
+    affiliation: "Texas Tech University",
+    years: "2022–2024",
+    url: "http://www.deidrepopovich.com/",
+    photo: "/members/deidre-popovich.jpg",
+  },
+  {
+    name: "Jane Risen",
+    affiliation: "University of Chicago Booth",
+    role: "Chair (2022–2024)",
+    years: "2022–2024",
+    url: "https://www.chicagobooth.edu/faculty/directory/r/jane-l-risen",
+    photo: "/members/jane-risen.jpg",
+  },
+  {
+    name: "Ovul Sezer",
+    affiliation: "Cornell SC Johnson College of Business",
+    years: "2022–2024",
+    url: "https://business.cornell.edu/faculty-research/faculty/os244/",
+    photo: "/members/ovul-sezer.jpg",
+  },
+  // ── ended 2023 ──────────────────────────────────────────────────────────
+  {
+    name: "Brandy Edmondson",
+    affiliation: "Rice University",
+    years: "2021–2023",
+    url: "https://business.rice.edu/person/brandy-edmondson",
+    photo: "/members/brandy-edmondson.jpg",
+  },
+  {
+    name: "Crystal Hall",
+    affiliation: "University of Washington",
+    role: "Inaugural Chair (2020–2022)",
+    years: "2020–2023",
+    url: "https://evans.uw.edu/profile/crystal-hall/",
+    photo: "/members/crystal-hall.jpg",
+  },
+  {
+    name: "Kevin Jarbo",
+    affiliation: "Carnegie Mellon University",
+    years: "2021–2023",
+    url: "https://www.cmu.edu/dietrich/sds/people/faculty/kevin-jarbo.html",
+    photo: "/members/kevin-jarbo.jpg",
+  },
+  {
+    name: "Tyler MacDonald",
+    affiliation: "Boston University",
+    years: "2021–2023",
+    url: "https://www.linkedin.com/in/tylerfrasermacdonald/",
+    photo: "/members/tyler-macdonald.jpg",
+  },
+  {
+    name: "Eesha Sharma",
+    affiliation: "San Diego State University",
+    years: "2021–2023",
+    url: "https://business.sdsu.edu/directory/esharma",
+    photo: "/members/eesha-sharma.jpg",
+  },
+  // ── ended 2021 ──────────────────────────────────────────────────────────
+  {
+    name: "Edward Chang",
+    affiliation: "Harvard Business School",
+    years: "2020–2021",
+    url: "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=1284280",
+    photo: "/members/edward-chang.jpg",
+  },
+]
+
+const boardReps: Member[] = [
+  // Most recent first
+  {
+    name: "Ayelet Gneezy",
+    affiliation: "UC San Diego Rady School",
+    years: "2025–Present",
+    url: "https://rady.ucsd.edu/faculty-research/faculty/ayelet-gneezy.html",
+    photo: "/members/ayelet-gneezy.jpg",
+  },
+  {
+    name: "Stephen Spiller",
+    affiliation: "UCLA Anderson",
+    years: "2022–2024",
+    url: "https://www.anderson.ucla.edu/faculty-and-research/marketing/faculty/spiller",
+    photo: "/members/stephen-spiller.jpg",
+  },
+  {
+    name: "Oleg Urminsky",
+    affiliation: "University of Chicago Booth",
+    years: "2021–2022",
+    url: "https://www.chicagobooth.edu/faculty/directory/u/oleg-urminsky",
+    photo: "/members/oleg-urminsky.jpg",
+  },
+  {
+    name: "Suzanne Shu",
+    affiliation: "Cornell SC Johnson College of Business",
+    years: "2020–2021",
+    url: "https://business.cornell.edu/faculty-research/faculty/sbs78/",
+    photo: "/members/suzanne-shu.jpg",
   },
 ]
 
@@ -389,6 +379,9 @@ function MemberCard({ member, showContact = false }: { member: Member; showConta
 }
 
 export function Members() {
+  const [pastExpanded, setPastExpanded] = useState(false)
+  const PREVIEW_COUNT = 5
+
   return (
     <section id="members" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -420,17 +413,68 @@ export function Members() {
           <h3 className="text-lg font-semibold mb-8 pb-4 border-b border-border">
             Past Members
           </h3>
+
+          {/* Always-visible first row */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-            {pastMembers.map((member, index) => (
+            {pastMembers.slice(0, PREVIEW_COUNT).map((member, index) => (
               <MemberCard key={index} member={member} showContact />
             ))}
           </div>
-          <p className="mt-8 text-sm text-muted-foreground">
-            If you&rsquo;re a past member and you&rsquo;d like to be featured on this page, reach out to{" "}
-            <a href="mailto:sjdmdichair@gmail.com" className="underline underline-offset-2 hover:text-foreground transition-colors">
-              sjdmdichair@gmail.com
-            </a>.
-          </p>
+
+          {/* Collapsible remainder with smooth height animation */}
+          <div
+            className="grid transition-[grid-template-rows] duration-500 ease-in-out"
+            style={{ gridTemplateRows: pastExpanded ? "1fr" : "0fr" }}
+          >
+            <div className="overflow-hidden">
+              {/* Gradient fade hint — only visible when collapsed */}
+              <div className="relative">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 pt-8">
+                  {pastMembers.slice(PREVIEW_COUNT).map((member, index) => (
+                    <MemberCard key={index} member={member} showContact />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Toggle button */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <button
+              onClick={() => setPastExpanded(!pastExpanded)}
+              className="group flex items-center gap-2 px-6 py-2.5 rounded-full border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:border-foreground/30 hover:bg-muted/50 transition-all duration-200"
+            >
+              {pastExpanded ? (
+                <>
+                  <ChevronUp className="w-4 h-4 transition-transform duration-200" />
+                  Show fewer
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200" />
+                  Show all {pastMembers.length} past members
+                </>
+              )}
+            </button>
+            <p className="text-sm text-muted-foreground">
+              If you're a past member and you'd like to update the information on this page, reach out to{" "}
+              <a href="mailto:sjdmdichair@gmail.com" className="underline underline-offset-2 hover:text-foreground transition-colors">
+                sjdmdichair@gmail.com
+              </a>.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-lg font-semibold mb-8 pb-4 border-b border-border">
+            Board Representatives
+          </h3>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            {boardReps.map((member, index) => (
+              <MemberCard key={index} member={member} showContact />
+            ))}
+          </div>
         </div>
       </div>
     </section>
